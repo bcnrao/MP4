@@ -43,10 +43,11 @@ app.add_middleware(
 
 # ── Config ─────────────────────────────────────────────────────────────────
 GROQ_API_KEY      = os.getenv("GROQ_API_KEY", "")
+OPEN_API_KEY     = os.getenv("OPEN_API_KEY", "")
 PINECONE_API_KEY  = os.getenv("PINECONE_API_KEY", "")
-PINECONE_INDEX    = "airline-kb-index"
+PINECONE_INDEX    = "airline-faq-index"
 db_params = {
-    "host":     os.getenv("DB_HOST", "aws-1-ap-southeast-2.pooler.supabase.com"),
+    "host":     os.getenv("DB_HOST", "aws-1-ap-northeast-2.pooler.supabase.com"),
     "port":     os.getenv("DB_PORT", "5432"),
     "user":     os.getenv("POSTGRES_USER", ""),
     "password": os.getenv("SQLPWD", ""),
